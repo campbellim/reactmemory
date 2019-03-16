@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Bayonetta",
+        "image": "Bayonetta.png"
+    },
+    {
+        "id": 2,
+        "name": "Cloud",
+        "image": "cloud.png"
+    },
+        {
+        "id": 3,
+        "name": "Mario",
+        "image": "mario.png"
+    },
+            {
+        "id": 4,
+        "name": "Pikachu",
+        "image": "pikachu.jpg"
+    }
+]
