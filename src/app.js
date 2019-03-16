@@ -2,7 +2,7 @@ import React from "react";
 import PictureCard from "./components/PictureCard";
 import Pictures from "./pictures.json";
 import TitleCard from "./components/title";
-import "./App.css";
+
 
 class App extends React.Component {
   state = {
@@ -17,13 +17,12 @@ class App extends React.Component {
     var currentIndex = array.length;
     var temporaryValue, randomIndex;
   
-    // While there remain piece to shuffle...
+    
     while (0 !== currentIndex) {
-      // Pick a remaining element...
+    
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
   
-      // And swap it with the current element.
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
@@ -34,7 +33,7 @@ class App extends React.Component {
 
   
   cardClicked = cardID => {
-    //Check if ID of Card has Been Clicked Already
+ //check clicked function
     let hasBeenClicked=false;
     for(var i=0;i<this.state.clickedCards.length;i++){
       if(cardID===this.state.clickedCards[i]){
@@ -42,12 +41,12 @@ class App extends React.Component {
         break;
       }
     }
-    //If Card has Been Clicked,Player Lost
+    //Lose function
     if(hasBeenClicked){
       alert("YOU LOSE!");
       this.reset();
     }
-    //Else Player Clicked Correctly
+    //Continue function
     else{
 
       let newArray=this.state.clickedCards;
@@ -65,12 +64,12 @@ class App extends React.Component {
     }
   };
 
-  //Reset Function
+  //Reset
   reset = () => {
     this.setState({clickedCards: [], count: 0});
   }
   
-  //Render Function
+  //Render F
   render=()=>{
     let shuffledArray=this.shuffle(this.state.cards);
 
