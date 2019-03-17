@@ -12,7 +12,7 @@ class App extends React.Component {
   };
 
 
-  shuffle = array => {
+  switch = array => {
 
     var currentIndex = array.length;
     var temporaryValue, randomIndex;
@@ -71,9 +71,9 @@ class App extends React.Component {
   
   //Render F
   render=()=>{
-    let shuffledArray=this.shuffle(this.state.cards);
+    let switchArray=this.switch(this.state.cards);
 
-    const allPictures = shuffledArray.map(Picture =>
+    const allPictures = switchArray.map(Picture =>
       <PictureCard image={Picture.image} name={Picture.name} id={Picture.id} cardClicked={this.cardClicked} />
     );
 
